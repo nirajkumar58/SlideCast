@@ -1,0 +1,10 @@
+{
+  "short_name": "PDFify",
+  "name": "PPT to Audio Converter",
+  "description": "Convert PowerPoint presentations into engaging audio conversations with AI voices",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "orientation": "portrait"
+}

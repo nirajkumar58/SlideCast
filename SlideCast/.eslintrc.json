@@ -1,0 +1,65 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": ["warn", {
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_"
+    }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/media-has-caption": "off",
+    "no-console": ["warn", {
+      "allow": ["warn", "error"]
+    }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js", "*.test.jsx"],
+      "env": {
+        "jest": true
+      }
+    },
+    {
+      "files": ["backend/**/*.js"],
+      "env": {
+        "browser": false,
+        "node": true
+      }
+    }
+  ],
+  "ignorePatterns": [
+    "dist/",
+    "build/",
+    "node_modules/",
+    "*.min.js"
+  ]
+}
